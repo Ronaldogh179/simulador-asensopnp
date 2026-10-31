@@ -11,7 +11,6 @@
       --pnp-bg: #d9ecea;
       --pnp-gold: #c9a438;
       --pnp-blue: #0095ff;
-      --pnp-blue-hover: #007ad1;
       --pnp-red: #e60000;
       --pnp-green: #198754;
       --text-dark: #1e293b;
@@ -31,13 +30,14 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      user-select: none;
     }
 
     /* CABECERA OFICIAL SIGCP */
     header {
       background-color: var(--pnp-header);
       color: white;
-      height: 64px;
+      height: 58px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,8 +54,8 @@
     }
 
     .pnp-shield {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       background: radial-gradient(circle, #ffffff 0%, #c8e0dd 100%);
       border: 2px solid var(--pnp-gold);
       border-radius: 50%;
@@ -64,11 +64,11 @@
       justify-content: center;
       font-weight: 900;
       color: var(--pnp-header);
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .brand-text h1 {
-      font-size: 21px;
+      font-size: 19px;
       font-weight: 800;
       letter-spacing: 0.5px;
       line-height: 1;
@@ -79,7 +79,7 @@
       display: inline-block;
       background: white;
       color: var(--pnp-header);
-      font-size: 8.5px;
+      font-size: 8px;
       font-weight: 800;
       padding: 1px 5px;
       margin-top: 2px;
@@ -88,7 +88,7 @@
 
     .header-center {
       color: var(--pnp-gold);
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: 0.5px;
       text-align: center;
@@ -100,15 +100,14 @@
       gap: 14px;
     }
 
-    /* Cronómetro 120:00 minutos */
     .timer-box {
       background-color: #082f2b;
       border: 1.5px solid var(--pnp-gold);
       color: #ffffff;
-      padding: 6px 14px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: 4px;
       font-weight: 800;
-      font-size: 16px;
+      font-size: 15px;
       letter-spacing: 0.8px;
       display: none;
       align-items: center;
@@ -118,11 +117,10 @@
     .timer-box span.timer-label {
       color: var(--pnp-gold);
       font-size: 11px;
-      text-transform: uppercase;
     }
 
     /* ==========================================
-       PANTALLA 1: LOGIN SIGCP IDÉNTICO A LA CAPTURA
+       PANTALLA 1: LOGIN SIGCP
        ========================================== */
     #loginScreen {
       flex: 1;
@@ -185,7 +183,6 @@
       background: white;
       border: none;
       padding: 0 10px;
-      cursor: pointer;
       color: #475569;
       display: flex;
       align-items: center;
@@ -199,17 +196,11 @@
       border-radius: 5px;
       font-size: 15px;
       font-weight: 600;
-      cursor: pointer;
       letter-spacing: 0.5px;
-      transition: background 0.2s;
-    }
-
-    .btn-login:hover {
-      background-color: var(--pnp-blue-hover);
     }
 
     .login-error {
-      background-color: rgba(230, 0, 0, 0.2);
+      background-color: rgba(230, 0, 0, 0.25);
       border: 1px solid #ff8080;
       color: #ffd6d6;
       font-size: 12px;
@@ -224,7 +215,6 @@
       font-size: 12.5px;
       color: #d1fae5;
       margin-top: 2px;
-      opacity: 0.9;
     }
 
     .divider-col {
@@ -292,7 +282,7 @@
     }
 
     /* ==========================================
-       PANTALLA 2: INSTRUCCIONES Y BOTÓN INICIAR (120 MIN)
+       PANTALLA 2: INICIO DEL CRONÓMETRO (120 MIN)
        ========================================== */
     #startExamScreen {
       flex: 1;
@@ -305,29 +295,28 @@
     .start-card {
       background: white;
       border: 2px solid var(--pnp-card);
-      border-radius: 8px;
-      max-width: 560px;
+      border-radius: 6px;
+      max-width: 540px;
       width: 100%;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
       text-align: center;
     }
 
     .start-card-header {
       background-color: var(--pnp-card);
       color: white;
-      padding: 18px;
-      font-size: 17px;
+      padding: 16px;
+      font-size: 16px;
       font-weight: 800;
       border-bottom: 3px solid var(--pnp-gold);
     }
 
     .start-card-body {
-      padding: 26px 28px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       gap: 14px;
-      font-size: 14.5px;
+      font-size: 14px;
       color: #334155;
       line-height: 1.5;
     }
@@ -336,73 +325,73 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin: 8px 0;
     }
 
     .info-pill {
       background: #f1f7f6;
       border: 1px solid #cbd5e1;
-      border-radius: 6px;
+      border-radius: 4px;
       padding: 10px;
       font-weight: 700;
       color: var(--pnp-header);
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .info-pill span {
       display: block;
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 900;
       color: var(--pnp-blue);
     }
 
     /* ==========================================
-       PANTALLA 3: SIMULADOR DE EXAMEN
+       PANTALLA 3: SIMULADOR DE EXAMEN (SIN HOVERS NI MANITO)
        ========================================== */
     #examScreen {
       flex: 1;
       display: none;
       overflow: hidden;
-      padding: 14px 18px;
-      gap: 16px;
+      padding: 10px 16px;
+      gap: 14px;
     }
 
-    /* LATERAL IZQUIERDO: 4 COLUMNAS (1-25, 26-50, 51-75, 76-100) */
+    /* LATERAL IZQUIERDO: 4 COLUMNAS DE 25 FILAS EXACTAS (1-25, 26-50, 51-75, 76-100) */
     .sidebar {
-      width: 255px;
+      width: 250px;
       background-color: #ffffff;
       border: 2px solid var(--pnp-card);
-      border-radius: 6px;
+      border-radius: 4px;
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      height: 100%;
     }
 
     .sidebar-title {
       background-color: var(--pnp-card);
       color: white;
-      padding: 8px 12px;
-      font-size: 13px;
+      padding: 6px 10px;
+      font-size: 12.5px;
       font-weight: 700;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid var(--pnp-gold);
+      flex-shrink: 0;
     }
 
-    /* Cuadrícula de 4 columnas x 25 filas ordenada verticalmente */
+    /* 25 filas exactas que se ajustan al 100% del alto para que siempre se vea del 1 al 25 completo */
     .questions-grid-4col {
       flex: 1;
-      padding: 8px 10px;
+      padding: 4px 8px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(25, minmax(18px, 1fr));
-      grid-auto-flow: column; /* Hace que vaya del 1 al 25 hacia abajo, luego 26 al 50 arriba */
+      grid-template-rows: repeat(25, 1fr);
+      grid-auto-flow: column;
       column-gap: 6px;
-      row-gap: 2px;
-      overflow-y: auto;
+      row-gap: 0px;
       align-items: center;
+      overflow: hidden;
     }
 
     .q-nav-cell {
@@ -410,59 +399,44 @@
       align-items: center;
       justify-content: flex-start;
       gap: 4px;
-      font-size: 11.5px;
-      color: #1e293b;
-      user-select: none;
-      padding: 1px 2px;
-      border-radius: 3px;
+      font-size: 11px;
+      color: #000000;
+      cursor: default;
     }
 
-    .q-nav-cell.current-q .q-num-label {
-      color: var(--pnp-blue);
-      font-weight: 900;
-      text-decoration: underline;
-    }
-
+    /* Sin subrayado ni color especial ni sombreado */
     .q-num-label {
-      width: 21px;
+      width: 20px;
       text-align: right;
       font-weight: 600;
-      cursor: default; /* No hace nada al darle clic al número */
+      color: #000000;
+      cursor: default;
     }
 
-    /* BOLITAS MÁS PEQUEÑAS Y ÚNICO LUGAR CLICKEABLE */
+    /* BOLITA PEQUEÑA: SIN MANITO, SIN HOVER, SIN BORDE CELESTE */
     .small-circle {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
-      border: 2px solid #111827;
+      border: 1.5px solid #000000;
       background-color: #ffffff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer; /* Solo el interior del círculo tiene puntero */
+      cursor: default; /* No sale manito */
       flex-shrink: 0;
-      transition: transform 0.1s;
-    }
-
-    .small-circle:hover {
-      transform: scale(1.12);
-      border-color: var(--pnp-blue);
     }
 
     .small-circle::after {
       content: '';
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background-color: transparent;
-      transform: scale(0);
-      transition: transform 0.15s ease;
     }
 
     .small-circle.marked::after {
       background-color: var(--pnp-red);
-      transform: scale(1);
     }
 
     /* PANEL DERECHO: PREGUNTA Y ALTERNATIVAS */
@@ -470,20 +444,20 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      overflow-y: auto;
+      gap: 12px;
+      height: 100%;
+      overflow: hidden;
     }
 
     .top-question-box {
       background: #ffffff;
-      border: 2px solid #0f172a;
-      border-radius: 4px;
-      padding: 18px 22px;
-      min-height: 155px;
+      border: 2px solid #000000;
+      padding: 16px 20px;
+      min-height: 145px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      position: relative;
+      flex-shrink: 0;
     }
 
     .top-bar-row {
@@ -491,52 +465,43 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 16px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .q-badge-header {
       font-size: 13px;
       font-weight: 800;
-      color: var(--pnp-header);
-      text-transform: uppercase;
+      color: #000000;
     }
 
     .btn-finish-box {
-      border: 2px solid #0f172a;
+      border: 2px solid #000000;
       background-color: #ffffff;
-      color: #0f172a;
-      padding: 6px 16px;
-      font-size: 13px;
+      color: #000000;
+      padding: 5px 14px;
+      font-size: 12.5px;
       font-weight: 700;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .btn-finish-box:hover {
-      background-color: var(--pnp-red);
-      color: white;
-      border-color: var(--pnp-red);
+      cursor: default;
     }
 
     .question-text-content {
-      font-size: 16.5px;
+      font-size: 15.5px;
       font-weight: 700;
-      line-height: 1.5;
-      color: #0f172a;
+      line-height: 1.45;
+      color: #000000;
       cursor: default;
-      user-select: none;
     }
 
     /* CAJA DE ALTERNATIVAS */
     .bottom-options-box {
       background: #ffffff;
-      border: 2px solid #0f172a;
-      border-radius: 4px;
-      padding: 22px 24px;
+      border: 2px solid #000000;
+      padding: 20px 24px;
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow-y: auto;
     }
 
     .options-container {
@@ -548,69 +513,52 @@
     .option-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      padding: 4px 2px;
-      cursor: default; /* Prohibido seleccionar haciendo clic en el texto */
-      user-select: none;
+      gap: 8px;
+      padding: 2px 0;
+      background: transparent; /* Jamás se sombrea */
+      cursor: default;
     }
 
-    /* Bolita de alternativa pequeña, única parte clickeable */
+    /* Bolita de alternativa pequeña: SIN MANITO, SIN HOVER AZUL, SIN SOMBREADO */
     .option-circle {
-      width: 15px;
-      height: 15px;
+      width: 13px;
+      height: 13px;
       border-radius: 50%;
-      border: 2px solid #0f172a;
+      border: 1.5px solid #000000;
       background-color: #ffffff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
+      cursor: default; /* Sin manito */
       flex-shrink: 0;
       margin-top: 3px;
     }
 
-    .option-circle:hover {
-      border-color: var(--pnp-blue);
-      transform: scale(1.1);
-    }
-
     .option-circle::after {
       content: '';
-      width: 7.5px;
-      height: 7.5px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background-color: var(--pnp-red);
-      transform: scale(0);
-      transition: transform 0.15s ease;
+      background-color: transparent;
     }
 
     .option-circle.selected::after {
-      transform: scale(1);
+      background-color: var(--pnp-red);
     }
 
     .option-letter {
-      font-size: 14.5px;
+      font-size: 14px;
       font-weight: 700;
-      color: #0f172a;
-      min-width: 20px;
+      color: #000000;
+      min-width: 18px;
       cursor: default;
     }
 
     .option-label-text {
-      font-size: 14.5px;
-      color: #1e293b;
+      font-size: 14px;
+      color: #000000;
       line-height: 1.4;
       cursor: default;
-    }
-
-    .exam-footer-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 14px;
-      border-top: 1px solid #e2e8f0;
-      font-size: 12px;
-      color: #64748b;
     }
 
     /* ==========================================
@@ -634,24 +582,23 @@
       background: var(--pnp-card);
       color: white;
       border: 2px solid var(--pnp-gold);
-      border-radius: 8px;
-      padding: 26px 24px;
+      border-radius: 6px;
+      padding: 24px;
       width: 92%;
-      max-width: 430px;
+      max-width: 420px;
       text-align: center;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 
     .modal-card h3 {
       color: var(--pnp-gold);
-      font-size: 20px;
+      font-size: 19px;
       margin-bottom: 10px;
       text-transform: uppercase;
     }
 
     .modal-card p {
-      font-size: 14.5px;
-      margin-bottom: 20px;
+      font-size: 14px;
+      margin-bottom: 18px;
       line-height: 1.45;
     }
 
@@ -663,12 +610,12 @@
 
     .btn-action {
       border: none;
-      border-radius: 5px;
-      padding: 9px 22px;
+      border-radius: 4px;
+      padding: 8px 20px;
       font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
+      font-size: 13.5px;
       text-transform: uppercase;
+      cursor: default;
     }
 
     .btn-yes {
@@ -683,17 +630,20 @@
     }
 
     /* ==========================================
-       PANTALLA 4: RESULTADOS (SOLO INCORRECTAS)
+       PANTALLA 4: RESULTADOS CON BARRA DE SCROLL PARA BAJAR Y SUBIR
        ========================================== */
     #resultsScreen {
       position: fixed;
-      inset: 64px 0 32px 0;
+      top: 58px;
+      left: 0;
+      right: 0;
+      bottom: 28px;
       background: var(--pnp-bg);
       display: none;
       flex-direction: column;
       align-items: center;
-      padding: 24px 16px;
-      overflow-y: auto;
+      padding: 18px 16px;
+      overflow: hidden;
       z-index: 50;
     }
 
@@ -704,9 +654,12 @@
     .results-card {
       background: white;
       border: 2px solid var(--pnp-card);
-      border-radius: 10px;
+      border-radius: 8px;
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
@@ -714,23 +667,24 @@
     .results-header {
       background: var(--pnp-card);
       color: white;
-      padding: 22px;
+      padding: 14px 20px;
       text-align: center;
       border-bottom: 3px solid var(--pnp-gold);
+      flex-shrink: 0;
     }
 
     .results-header h2 {
       color: var(--pnp-gold);
-      font-size: 22px;
+      font-size: 19px;
     }
 
     .score-circle {
-      width: 130px;
-      height: 130px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       background: #0f4c46;
-      border: 4px solid var(--pnp-gold);
-      margin: 14px auto;
+      border: 3px solid var(--pnp-gold);
+      margin: 8px auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -738,65 +692,86 @@
     }
 
     .score-num {
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 900;
       line-height: 1;
     }
 
     .score-sub {
-      font-size: 12px;
+      font-size: 10px;
       color: var(--pnp-gold);
       font-weight: 700;
-      margin-top: 4px;
+      margin-top: 2px;
     }
 
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      padding: 16px 22px;
+      gap: 10px;
+      padding: 10px 20px;
       background: #f8fafc;
       border-bottom: 1px solid #e2e8f0;
+      flex-shrink: 0;
     }
 
     .stat-item {
       background: white;
       border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      padding: 10px;
+      border-radius: 4px;
+      padding: 6px;
       text-align: center;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .stat-item span {
       display: block;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 2px;
     }
 
     .wrong-only-title {
-      padding: 16px 24px 4px;
-      font-size: 15px;
+      padding: 10px 22px 6px;
+      font-size: 13.5px;
       font-weight: 800;
       color: var(--pnp-red);
       text-transform: uppercase;
+      flex-shrink: 0;
+      border-bottom: 1px solid #e2e8f0;
     }
 
+    /* CONTENEDOR CON BARRA DE DESPLAZAMIENTO (SCROLLBAR) VISIBLE PARA BAJAR Y SUBIR */
     .review-list {
-      padding: 12px 24px 24px;
+      flex: 1;
+      overflow-y: scroll;
+      padding: 14px 22px 24px;
       display: flex;
       flex-direction: column;
       gap: 12px;
+    }
+
+    .review-list::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .review-list::-webkit-scrollbar-track {
+      background: #e2e8f0;
+    }
+
+    .review-list::-webkit-scrollbar-thumb {
+      background-color: var(--pnp-card);
+      border-radius: 6px;
+      border: 2px solid #e2e8f0;
     }
 
     .review-item {
       border: 1px solid #fecaca;
       border-left: 5px solid var(--pnp-red);
       background: #fef2f2;
-      border-radius: 6px;
-      padding: 12px 16px;
+      border-radius: 4px;
+      padding: 12px 14px;
       font-size: 13.5px;
+      flex-shrink: 0;
     }
 
     .review-q {
@@ -808,11 +783,11 @@
     footer {
       background-color: var(--pnp-header);
       color: white;
-      height: 32px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: space-around;
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 700;
       border-top: 2px solid #237068;
       flex-shrink: 0;
@@ -843,9 +818,7 @@
     </div>
   </header>
 
-  <!-- ==========================================
-       PANTALLA 1: LOGIN SIGCP (CIP, CLAVE, TOKEN)
-       ========================================== -->
+  <!-- PANTALLA 1: LOGIN SIGCP -->
   <section id="loginScreen">
     <div class="login-card">
       <form class="login-form" onsubmit="validarLogin(event)">
@@ -857,7 +830,7 @@
         <div class="input-group">
           <div class="input-icon">🔒</div>
           <input type="password" id="passInput" placeholder="Contraseña" autocomplete="off" required />
-          <button type="button" class="eye-btn" onclick="togglePassword()" title="Mostrar/Ocultar contraseña">👁️</button>
+          <button type="button" class="eye-btn" onclick="togglePassword()">👁️</button>
         </div>
 
         <div class="input-group">
@@ -894,16 +867,14 @@
     </div>
   </section>
 
-  <!-- ==========================================
-       PANTALLA 2: INICIO DEL CRONÓMETRO (120 MINUTOS)
-       ========================================== -->
+  <!-- PANTALLA 2: INICIO DEL CRONÓMETRO (120 MINUTOS) -->
   <section id="startExamScreen">
     <div class="start-card">
       <div class="start-card-header">
         SIMULADOR DEL EXAMEN DE ASCENSO PNP 2026 - PROMOCIÓN 2027
       </div>
       <div class="start-card-body">
-        <p>Bienvenido, efectivo policial con CIP <strong>31054163</strong>. El sistema ha chocolateado aleatoriamente <strong>100 preguntas</strong> del balotario oficial.</p>
+        <p>Efectivo policial con CIP <strong>31054163</strong>. El sistema ha seleccionado y chocolateado aleatoriamente <strong>100 preguntas</strong> de las <strong id="totalBancoLabel">1498</strong> del balotario oficial.</p>
 
         <div class="info-pills">
           <div class="info-pill">PREGUNTAS<span>100</span></div>
@@ -911,63 +882,40 @@
           <div class="info-pill">PUNTAJE MÁX.<span>100 PTS</span></div>
         </div>
 
-        <p style="font-size: 13px; color: #475569;">
-          <strong>Instrucción importante:</strong> Tal como en el sistema oficial, para marcar tu alternativa o cambiar de pregunta en el panel izquierdo, debes hacer clic <strong>únicamente dentro del círculo blanco</strong>.
-        </p>
-
         <button class="btn-login" style="margin-top: 8px;" onclick="iniciarSimulacroConReloj()">
-          ▶ COMENZAR EXAMEN (120:00 MINUTOS)
+          COMENZAR EXAMEN (120:00 MINUTOS)
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       PANTALLA 3: SIMULADOR (4 COLUMNAS 1-100 Y PREGUNTA)
-       ========================================== -->
+  <!-- PANTALLA 3: SIMULADOR (4 COLUMNAS 1-25, 26-50, 51-75, 76-100) -->
   <main id="examScreen">
-    <!-- LATERAL IZQUIERDO: 4 COLUMNAS DE 25 -->
     <aside class="sidebar">
       <div class="sidebar-title">
         <span>Preguntas del 1 al 100</span>
         <span id="answeredCounter">0/100</span>
       </div>
-      <div class="questions-grid-4col" id="sidebarGrid">
-        <!-- Se generan las 100 preguntas en 4 columnas de 25 -->
-      </div>
+      <div class="questions-grid-4col" id="sidebarGrid"></div>
     </aside>
 
-    <!-- ÁREA DERECHA -->
     <div class="exam-main">
-      <!-- Cuadro Superior: Texto de la pregunta + Botón Finalizar Examen -->
       <div class="top-question-box">
         <div class="top-bar-row">
-          <span class="q-badge-header" id="qHeaderNum">PREGUNTA N° 1</span>
+          <span class="q-badge-header" id="qHeaderNum">PREGUNTA N° 1 DE 100</span>
           <button class="btn-finish-box" onclick="abrirModalFinalizar()">finalizar examen</button>
         </div>
-        <div class="question-text-content" id="qTextContent">
-          Cargando pregunta...
-        </div>
-        <div style="font-size: 11px; color: #64748b; margin-top: 10px;" id="qMetaInfo"></div>
+        <div class="question-text-content" id="qTextContent"></div>
+        <div style="font-size: 11px; color: #475569; margin-top: 8px;" id="qMetaInfo"></div>
       </div>
 
-      <!-- Cuadro Inferior: Alternativas (Solo se seleccionan dando clic dentro del círculo) -->
       <div class="bottom-options-box">
-        <div class="options-container" id="optionsContainer">
-          <!-- Opciones a, b, c, d, e -->
-        </div>
-
-        <div class="exam-footer-bar">
-          <span>Nota: Haz clic únicamente dentro del círculo blanco para marcar una alternativa o cambiar de pregunta.</span>
-          <button class="btn-action btn-yes" style="padding: 5px 12px; font-size: 11.5px;" onclick="chocolatearNuevoIntento()">
-            🔀 Chocolatear de nuevo
-          </button>
-        </div>
+        <div class="options-container" id="optionsContainer"></div>
       </div>
     </div>
   </main>
 
-  <!-- MODAL DE CONFIRMACIÓN: ¿ESTÁS SEGURO DE ENTREGAR? -->
+  <!-- MODAL DE CONFIRMACIÓN -->
   <div class="modal-overlay" id="confirmModal">
     <div class="modal-card">
       <h3>¿Estás seguro de entregar?</h3>
@@ -979,20 +927,17 @@
     </div>
   </div>
 
-  <!-- ==========================================
-       PANTALLA 4: RESULTADOS (SOLO MUESTRA INCORRECTAS)
-       ========================================== -->
+  <!-- PANTALLA 4: RESULTADOS CON SCROLLBAR PARA SUBIR Y BAJAR -->
   <section id="resultsScreen">
     <div class="results-card">
       <div class="results-header">
         <h2>RESULTADO OFICIAL DEL SIMULACRO PNP</h2>
-        <p style="font-size: 13px; margin-top: 4px;">Proceso de Ascenso Suboficiales PNP 2026 - Promoción 2027</p>
         <div class="score-circle">
           <span class="score-num" id="scoreValue">0</span>
           <span class="score-sub">DE 100 PUNTOS</span>
         </div>
-        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 10px;">
-          <button class="btn-action btn-yes" onclick="chocolatearNuevoIntento()">🔀 NUEVO EXAMEN CHOCOLATEADO</button>
+        <div style="display: flex; gap: 12px; justify-content: center; margin-top: 6px;">
+          <button class="btn-action btn-yes" onclick="chocolatearNuevoIntento()">NUEVO EXAMEN CHOCOLATEADO</button>
         </div>
       </div>
 
@@ -1002,8 +947,8 @@
         <div class="stat-item" style="color: #64748b;">SIN RESPONDER<span id="resBlank">0</span></div>
       </div>
 
-      <div class="wrong-only-title" id="wrongListTitle">
-        DETALLE EXCLUSIVO DE RESPUESTAS INCORRECTAS Y SIN RESPONDER:
+      <div class="wrong-only-title">
+        LISTA DE PREGUNTAS INCORRECTAS / SIN RESPONDER (DESLIZA LA BARRA DERECHA PARA BAJAR O SUBIR):
       </div>
       <div class="review-list" id="wrongListContainer"></div>
     </div>
@@ -1016,83 +961,24 @@
     <span>PLANILLA</span>
   </footer>
 
-  <!-- Carga automática de las 1500 preguntas generadas en preguntas.js para desplegar directo en Vercel -->
-  <script src="preguntas.js" onerror="console.log('Usando banco interno de respaldo')"></script>
+  <!-- Carga de las 1498 preguntas generadas en preguntas.js -->
+  <script src="preguntas.js"></script>
 
   <script>
-    // CREDENCIALES FIJAS PARA QUE PRACTIQUE TU CLIENTE
     const CIP_VALIDO = "31054163";
     const PASS_VALIDA = "Huancay@26*";
-
-    // Banco de respaldo por si aún no generas preguntas.js
-    const BANCO_RESPALDO = [
-      {
-        id: 1, codigo: "180838", ubicacion: "(ART: 2) CONSTITUCIÓN",
-        pregunta: "TODA PERSONA TIENE DERECHO: A ELEGIR SU LUGAR DE RESIDENCIA, A TRANSITAR POR EL TERRITORIO NACIONAL Y A SALIR DE ÉL Y ENTRAR EN ÉL, SALVO LIMITACIONES POR:",
-        opciones: [
-          "RAZONES DE SEGURIDAD PREVIA RESOLUCIÓN FISCAL Y EN APLICACIÓN DE LA LEY DE EXTRANJERÍA.",
-          "CAUSAS DE SALUD PÚBLICA O POR MANDATO JUDICIAL O POR APLICACIÓN DE LA LEY DE MIGRACIONES.",
-          "RAZONES DE SANIDAD O POR MANDATO JUDICIAL O POR APLICACIÓN DE LA LEY DE EXTRANJERÍA.",
-          "CAUSAS DE SALUBRIDAD, MANDATO ADMINISTRATIVO O POR APLICACIÓN DE LA LEY DE EXTRANJERÍA.",
-          "RAZONES DE SANIDAD O POR MANDATO JUDICIAL A PEDIDO DE LA SEGURIDAD PRIVADA AEROPORTUARIA."
-        ],
-        respuesta: "RAZONES DE SANIDAD O POR MANDATO JUDICIAL O POR APLICACIÓN DE LA LEY DE EXTRANJERÍA."
-      },
-      {
-        id: 2, codigo: "180839", ubicacion: "(ART: 42) CONSTITUCIÓN",
-        pregunta: "SE RECONOCEN LOS DERECHOS DE SINDICACIÓN Y HUELGA DE LOS SERVIDORES PÚBLICOS. NO ESTÁN COMPRENDIDOS:",
-        opciones: [
-          "TODOS LOS FUNCIONARIOS DEL ESTADO.",
-          "LOS MIEMBROS DE LA SUNAT NI DEL INSTITUTO NACIONAL PENITENCIARIO.",
-          "LOS QUE DESEMPEÑAN CARGOS DE CARRERA EN LA ADMINISTRACIÓN PÚBLICA.",
-          "LOS MIEMBROS DE LAS FUERZAS ARMADAS Y DE LA POLICÍA NACIONAL.",
-          "LOS MIEMBROS DE LAS FUERZAS ARMADAS Y DE LA POLICÍA NACIONAL EN ACTIVIDAD Y RETIRO."
-        ],
-        respuesta: "LOS MIEMBROS DE LAS FUERZAS ARMADAS Y DE LA POLICÍA NACIONAL."
-      },
-      {
-        id: 3, codigo: "180841", ubicacion: "(ART: 39) CONSTITUCIÓN",
-        pregunta: "TIENE LA MÁS ALTA JERARQUÍA EN EL SERVICIO A LA NACIÓN:",
-        opciones: [
-          "JUECES SUPERIORES",
-          "EL PRESIDENTE DEL TRIBUNAL CONSTITUCIONAL.",
-          "EL FISCAL DE LA NACIÓN.",
-          "EL PRESIDENTE DEL CONSEJO DE MINISTROS.",
-          "PRESIDENTE DE LA REPÚBLICA."
-        ],
-        respuesta: "PRESIDENTE DE LA REPÚBLICA."
-      },
-      {
-        id: 4, codigo: "180842", ubicacion: "(ART: 166) CONSTITUCIÓN",
-        pregunta: "ESTÁ CONSIDERADO EN LA FINALIDAD FUNDAMENTAL DE LA POLICÍA NACIONAL LO SIGUIENTE:",
-        opciones: [
-          "GARANTIZAR, MANTENER Y RESTABLECER EL ORDEN INTERNO Y PÚBLICO.",
-          "GARANTIZAR, MANTENER Y ESTABLECER EL ORDEN INTERNO.",
-          "GARANTIZAR, MANTENER Y RESTABLECER EL ORDEN PÚBLICO.",
-          "GARANTIZAR, MANTENER Y RESTABLECER EL ORDEN INTERNO.",
-          "GARANTIZAR Y RESTABLECER EL ORDEN INTERNO."
-        ],
-        respuesta: "GARANTIZAR, MANTENER Y RESTABLECER EL ORDEN INTERNO."
-      },
-      {
-        id: 5, codigo: "180848", ubicacion: "(ART: 30) CONSTITUCIÓN",
-        pregunta: "LOS PERUANOS MAYORES DE DIECIOCHO AÑOS, SON:",
-        opciones: ["ELEGIBLES.", "CONTRIBUYENTES.", "CIUDADANOS.", "HABITANTES.", "EXTRANJEROS."],
-        respuesta: "CIUDADANOS."
-      },
-      {
-        id: 6, codigo: "180858", ubicacion: "(ART: 2) CONSTITUCIÓN",
-        pregunta: "ES DELITO TODA ACCIÓN QUE SUSPENDE O CLAUSURA ALGÚN ÓRGANO DE EXPRESIÓN O LE IMPIDE:",
-        opciones: ["CIRCULAR LIBREMENTE.", "FUNDAR MEDIOS DE COMUNICACIÓN.", "DIFUNDIR MEDIOS DE COMUNICACIÓN.", "DIFUNDIR LIBREMENTE.", "CIRCULAR RESTRICTIVAMENTE."],
-        respuesta: "CIRCULAR LIBREMENTE."
-      }
-    ];
 
     let examen100 = [];
     let respuestasMarcadas = {};
     let preguntaActiva = 0;
-    let segundosRestantes = 120 * 60; // 120 minutos en segundos
+    let segundosRestantes = 120 * 60;
     let intervaloReloj = null;
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.BANCO_PREGUNTAS_PDF && window.BANCO_PREGUNTAS_PDF.length > 0) {
+        document.getElementById("totalBancoLabel").textContent = window.BANCO_PREGUNTAS_PDF.length;
+      }
+    });
 
     function togglePassword() {
       const input = document.getElementById("passInput");
@@ -1117,7 +1003,7 @@
         return;
       }
       if (!/^\d{6}$/.test(token)) {
-        errBox.textContent = "El token debe contener exactamente 6 dígitos numéricos.";
+        errBox.textContent = "El token debe contener 6 dígitos numéricos.";
         errBox.style.display = "block";
         return;
       }
@@ -1137,16 +1023,11 @@
     }
 
     function prepararPreguntasChocolateadas() {
-      const fuente = (window.BANCO_PREGUNTAS_PDF && window.BANCO_PREGUNTAS_PDF.length > 0)
-        ? window.BANCO_PREGUNTAS_PDF
-        : BANCO_RESPALDO;
+      const fuente = window.BANCO_PREGUNTAS_PDF || [];
+      const barajadas = mezclar(fuente);
 
-      let pool = mezclar(fuente);
-      while (pool.length < 100) {
-        pool = pool.concat(mezclar(fuente));
-      }
-
-      examen100 = pool.slice(0, 100).map((q, idx) => ({
+      // Selecciona 100 preguntas al azar de las 1498 y chocolatea sus 5 alternativas
+      examen100 = barajadas.slice(0, 100).map((q, idx) => ({
         ...q,
         numero: idx + 1,
         opcionesMezcladas: mezclar(q.opciones)
@@ -1174,7 +1055,7 @@
 
     function iniciarCronometro120Minutos() {
       if (intervaloReloj) clearInterval(intervaloReloj);
-      segundosRestantes = 120 * 60; // Exactamente 120:00 minutos
+      segundosRestantes = 120 * 60;
       actualizarTextoReloj();
 
       intervaloReloj = setInterval(() => {
@@ -1190,9 +1071,8 @@
     function actualizarTextoReloj() {
       const minTotales = Math.floor(segundosRestantes / 60);
       const segs = segundosRestantes % 60;
-      const minStr = String(minTotales).padStart(2, "0");
-      const segStr = String(segs).padStart(2, "0");
-      document.getElementById("timerDisplay").textContent = `${minStr}:${segStr}`;
+      document.getElementById("timerDisplay").textContent =
+        `${String(minTotales).padStart(2, "0")}:${String(segs).padStart(2, "0")}`;
     }
 
     function dibujarLateral4Columnas() {
@@ -1202,16 +1082,14 @@
       for (let i = 0; i < 100; i++) {
         const respondida = respuestasMarcadas[i] !== undefined;
         const cell = document.createElement("div");
-        cell.className = `q-nav-cell ${i === preguntaActiva ? "current-q" : ""}`;
+        cell.className = "q-nav-cell";
 
         const numSpan = document.createElement("span");
         numSpan.className = "q-num-label";
         numSpan.textContent = i + 1;
 
-        // ÚNICAMENTE EL CÍRCULO BLANCO TIENE EL EVENTO ONCLICK
         const circle = document.createElement("span");
         circle.className = `small-circle ${respondida ? "marked" : ""}`;
-        circle.title = `Ir a la pregunta ${i + 1}`;
         circle.addEventListener("click", (ev) => {
           ev.stopPropagation();
           mostrarPreguntaEnPantalla(i);
@@ -1231,7 +1109,7 @@
 
       document.getElementById("qHeaderNum").textContent = `PREGUNTA N° ${indice + 1} DE 100`;
       document.getElementById("qTextContent").textContent = `${indice + 1}. ${item.pregunta}`;
-      document.getElementById("qMetaInfo").textContent = `CÓDIGO: ${item.codigo || "PNP"} | ${item.ubicacion || "BALOTARIO OFICIAL 2026"}`;
+      document.getElementById("qMetaInfo").textContent = `CÓDIGO: ${item.codigo || "PNP"}`;
 
       const letras = ["a)", "b)", "c)", "d)", "e)"];
       const cont = document.getElementById("optionsContainer");
@@ -1241,7 +1119,6 @@
         const fila = document.createElement("div");
         fila.className = "option-item";
 
-        // ÚNICAMENTE LA BOLITA TIENE EL EVENTO CLICK PARA MARCAR LA CLAVE
         const bolita = document.createElement("span");
         const estaMarcada = respuestasMarcadas[indice] === opTexto;
         bolita.className = `option-circle ${estaMarcada ? "selected" : ""}`;
@@ -1306,26 +1183,21 @@
           malas++;
         }
 
-        // SOLO MOSTRAMOS LAS INCORRECTAS O SIN RESPONDER CON SU RESPUESTA REAL
         if (!esCorrecta) {
           const card = document.createElement("div");
           card.className = "review-item";
           card.innerHTML = `
             <div class="review-q">${idx + 1}. ${preg.pregunta}</div>
             <div style="color: #b91c1c; margin-bottom: 4px;">
-              <strong>Tu respuesta:</strong> ${respUsuario ? respUsuario : "<em>Sin responder</em>"} ❌
+              <strong>Tu respuesta:</strong> ${respUsuario ? respUsuario : "<em>Sin responder</em>"}
             </div>
             <div style="color: #15803d;">
-              <strong>Respuesta real:</strong> ${preg.respuesta}
+              <strong>Respuesta correcta del balotario:</strong> ${preg.respuesta}
             </div>
           `;
           wrongContainer.appendChild(card);
         }
       });
-
-      if (buenas === 100) {
-        wrongContainer.innerHTML = `<div style="padding: 16px; color: var(--pnp-green); font-weight: 700;">¡Felicitaciones! Respondiste correctamente las 100 preguntas. No tienes errores.</div>`;
-      }
 
       document.getElementById("scoreValue").textContent = buenas;
       document.getElementById("resCorrect").textContent = buenas;
